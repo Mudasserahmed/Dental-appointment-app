@@ -1,0 +1,23 @@
+<div class="center-container">
+    <form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
+      <div class="logo-class"> 
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT46IwTxD0wtKWwH1VjljIAXoioYod7i4sxowdwCMWXew&s" width="100px" height="100px" alt="logo" />
+    </div>
+      <h1>Login </h1>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" id="email" name="email" [(ngModel)]="formData.email" required email>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" id="password" name="password" [(ngModel)]="formData.password" required>
+      </mat-form-field>
+      
+      <p>don't have an account <a href="/signUp">Register</a></p>
+      
+        <br>
+        <button mat-flat-button color="primary"> Login </button>
+        <p style="color: white; background-color: rgb(155, 214, 155); padding: 2px;" *ngIf="success === true">Login Successfull</p>
+      </form>
+  </div>
+  
