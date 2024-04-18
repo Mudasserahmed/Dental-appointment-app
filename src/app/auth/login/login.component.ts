@@ -24,7 +24,7 @@ export class LoginComponent {
   submitForm(form: any) {
     if (form.valid) {
       console.log('Form submitted successfully!', this.formData);
-      this.success = true
+     
       //api call
       this.http.post(BASE_URL + "/user/login", this.formData)
       .pipe(
@@ -39,13 +39,15 @@ export class LoginComponent {
       .subscribe(
         (data) => {
           console.log('Response from server:', data);
-          this.router.navigate(['/dashboard']);
+          this.success = true
+          this.formData = {
+            password: '',
+            email: ''
+          }
+            this.router.navigate(['/dashboard']);
         }
       );
-      this.formData = {
-        password: '',
-        email: ''
-      }
+      
 
       // Here you can handle form submission, e.g., sending data to a server
     } else {

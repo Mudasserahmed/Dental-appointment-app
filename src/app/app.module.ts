@@ -13,7 +13,8 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatFormFieldModule,
     MatButtonModule,
     HttpClientModule,
+    MatProgressSpinnerModule,
+    MatGridListModule,
     ToastrModule.forRoot()
   ],    
   providers: [],

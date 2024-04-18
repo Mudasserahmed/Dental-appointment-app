@@ -1,0 +1,33 @@
+/* Customize the navbar */
+.navbar {
+    background-color: #333;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+  }
+  
+  .nav-link {
+    color: #fff;
+  }
+  
+  /* Center align card content */
+  .card {
+    text-align: center;
+    width: 200px;
+  }
+  
+  /* Add some padding to the card body */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Add margin to the container */
+  .container {
+    margin-top: 20px;
+  }
+  .card:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  
