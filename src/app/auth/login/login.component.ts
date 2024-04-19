@@ -23,6 +23,7 @@ export class LoginComponent {
 
   submitForm(form: any) {
     if (form.valid) {
+      localStorage.setItem("user",JSON.stringify(this.formData))
       console.log('Form submitted successfully!', this.formData);
      
       //api call
@@ -47,8 +48,6 @@ export class LoginComponent {
             this.router.navigate(['/dashboard']);
         }
       );
-      
-
       // Here you can handle form submission, e.g., sending data to a server
     } else {
       console.log('Form is invalid.');
