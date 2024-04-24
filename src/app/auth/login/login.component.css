@@ -1,6 +1,7 @@
 .center-container {
     display: flex;
-    justify-content: first baseline;
+    /* justify-content: first baseline; */
+    justify-content: center;
     align-items: center;
     height: 100vh; 
 }
