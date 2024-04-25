@@ -5,7 +5,7 @@
       <img src="../../.././assets/img.jpeg" width="100px" height="100px" alt="logo" />
       <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT46IwTxD0wtKWwH1VjljIAXoioYod7i4sxowdwCMWXew&s" width="100px" height="100px" alt="logo" /> -->
     </div>
-    <h1>Sign Up </h1>
+    <h1>Sign Up</h1>
     <mat-form-field>
       <mat-label>FullName</mat-label>
       <input matInput type="text" id="lastName" name="lastName" [(ngModel)]="formData.fullName" required>
@@ -28,7 +28,7 @@
   
     <button mat-flat-button color="primary" [disabled]="loader">
       <span *ngIf="loader">
-        <mat-spinner></mat-spinner>
+        <mat-spinner> </mat-spinner>
       </span>
       <span *ngIf="!loader">Register</span>
     </button>

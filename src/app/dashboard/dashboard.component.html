@@ -1,58 +1,20 @@
 
+<mat-toolbar style="background-color: rgb(239, 235, 235);"> 
+<mat-toolbar-row class="row"> 
+  <img src="../../assets/logo.png"   width="60" height="60"/>
+  <a href="" class="link"> <h3>  Contact </h3> </a>
+ <a href=""  class="link">  <h3> About Us </h3> </a>
+  <a href="/book"  class="link">  <h3>Book Appointement</h3> </a>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+</mat-toolbar-row>
+</mat-toolbar>
+<div class="main-cards"> 
+<app-cards ></app-cards>
+<app-cards ></app-cards>
+<app-cards ></app-cards>
+<app-cards ></app-cards>
+<app-cards ></app-cards>
+<!-- <app-book-form></app-book-form> -->
+</div>
 
-<body>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">Dashboard</a>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#" (click)="logout()" >Logout</a>
-      </li>
-    </ul>
-  </nav>
-
-  <div class="container mt-4">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Book New</h5>
-            <p class="card-text">click here to book new Appointement</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"> Contact</h5>
-            <p class="card-text">Some information here...</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">  Check Availability</h5>
-            <p class="card-text">check availability for the appointemnt</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">learn more</h5>
-            <p class="card-text">Some information ...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 
