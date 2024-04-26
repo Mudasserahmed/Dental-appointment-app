@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class DashboardComponent {
   inital =  0; 
 
-constructor(){
+constructor(private router:Router){
 
 }
 
@@ -17,4 +17,8 @@ constructor(){
     console.log("local storage cleared")
     localStorage.clear()
   }
+  logoClick(){
+    console.log("image clicked")
+    this.router.navigate(["/dashboard"])
+   }
 }
