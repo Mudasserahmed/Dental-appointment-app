@@ -14,6 +14,7 @@ constructor(private router:Router){
 
   // logout logic 
   logout(){
+    this.router.navigate(['/login'])
     console.log("local storage cleared")
     localStorage.clear()
   }

@@ -1,6 +1,8 @@
+
 /* Customize the navbar */
 .navbar {
   background-color: #333;
+
 }
 
 .navbar-brand {
@@ -42,6 +44,14 @@
 }
 .row {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+
+}
+.top-left-nav{
+  display: flex;
+  align-items: center;
   gap: 20px;
 }
 .link{
@@ -51,4 +61,8 @@
 .link:hover{
   transform: scale(1.05);
   color: #b8b1b1;
+}
+.table-container{
+  max-width: 91%;
+  margin: 0%  4% 10% 4%;
 }

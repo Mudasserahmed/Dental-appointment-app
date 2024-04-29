@@ -1,12 +1,18 @@
-
+ 
 <mat-toolbar style="background-color: rgb(239, 235, 235);"> 
-<mat-toolbar-row class="row"> 
-  <img src="../../assets/logo.png"  (click)="logoClick()" style="cursor: pointer;"  width="60" height="60"/>
-  <a href="" class="link"> <h3>  Contact </h3> </a>
- <a href=""  class="link">  <h3> About Us </h3> </a>
-  <a href="/book"  class="link">  <h3>Book Appointement</h3> </a>
-
-</mat-toolbar-row>
+    <mat-toolbar-row class="row"> 
+      <div class="top-left-nav"> 
+      <img src="../../assets/logo.png"  (click)="logoClick()" style="cursor: pointer;"  width="60" height="60"/>
+      <a href="" class="link"> <h3>  Contact </h3> </a>
+      <a href=""  class="link">  <h3> About Us </h3> </a>
+      <a href="/book"  class="link">  <h3>Book Appointement</h3> </a>
+    </div>
+    <div> 
+      <button mat-icon-button (click)="logout()">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </div>
+    </mat-toolbar-row>
 </mat-toolbar>
 <div class="main-cards"> 
 <app-cards ></app-cards>
@@ -15,6 +21,10 @@
 <app-cards ></app-cards>
 <app-cards ></app-cards>
 <!-- <app-book-form></app-book-form> -->
+</div>
+<div class="table-container"> 
+  <h1>All Appointements</h1>
+<app-table></app-table>
 </div>
 
 

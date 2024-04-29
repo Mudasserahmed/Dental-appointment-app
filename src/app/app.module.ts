@@ -19,6 +19,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { CardsComponent } from './cards/cards.component';
 import { BookFormComponent } from './book-form/book-form.component';
+import { TableComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { BookFormComponent } from './book-form/book-form.component';
     SignUpComponent,
     DashboardComponent,
     CardsComponent,
-    BookFormComponent
+    BookFormComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { BookFormComponent } from './book-form/book-form.component';
     MatSelectModule,
     MatInputModule,
     MatFormFieldModule,
+    MatTableModule,
     MatButtonModule,
     HttpClientModule,
     MatProgressSpinnerModule,

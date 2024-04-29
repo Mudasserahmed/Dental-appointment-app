@@ -1,0 +1,9 @@
+/* .main-table{
+    margin-bottom: 20rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+} */
+.main-table {
+    width: 100%;
+    background-color: rgb(250, 251, 250);
+}
