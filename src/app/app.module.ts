@@ -21,6 +21,7 @@ import { CardsComponent } from './cards/cards.component';
 import { BookFormComponent } from './book-form/book-form.component';
 import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
+import {MatTooltipModule} from '@angular/material/tooltip';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { MatTableModule } from '@angular/material/table';
     FormsModule,
     MatSelectModule,
     MatInputModule,
+    MatTooltipModule,
     MatFormFieldModule,
     MatTableModule,
     MatButtonModule,
