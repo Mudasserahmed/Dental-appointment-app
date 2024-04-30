@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -22,6 +21,10 @@ import { BookFormComponent } from './book-form/book-form.component';
 import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutComponent } from './layout/layout.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,16 +33,20 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     DashboardComponent,
     CardsComponent,
     BookFormComponent,
-    TableComponent
+    TableComponent,
+    NavbarComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     MatSelectModule,
+    BrowserAnimationsModule,
     MatInputModule,
     MatTooltipModule,
     MatFormFieldModule,
+    MatSidenavModule,
     MatTableModule,
     MatButtonModule,
     HttpClientModule,

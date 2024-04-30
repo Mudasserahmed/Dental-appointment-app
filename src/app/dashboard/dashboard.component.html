@@ -1,30 +1,33 @@
- 
-<mat-toolbar style="background-color: rgb(239, 235, 235);"> 
-    <mat-toolbar-row class="row"> 
-      <div class="top-left-nav"> 
-      <img src="../../assets/logo.png"  (click)="logoClick()" style="cursor: pointer;"  width="60" height="60" matTooltip="Home"/>
-      <a href="" class="link"> <h3>  Contact </h3> </a>
-      <a href=""  class="link">  <h3> About Us </h3> </a>
-      <a href="/book"  class="link" matTooltip="book New">  <h3>Book Appointement</h3> </a>
-    </div>
-    <div> 
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer #drawer mode="over" style="width: 30%; display: flex; justify-content: center;">
+    <a href="/book"  class="link" matTooltip="book New">  <h3>Book Appointement</h3> </a>
+    
+  </mat-drawer>
+  <mat-drawer-content>
+
+    <!-- <img src="../../.././assets/logo.png" alt="Placeholder image" width="70" height="70"> -->
+    <div style="display: flex; justify-content: space-between;"> 
+      <button mat-raised-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
       <button mat-icon-button (click)="logout()" matTooltip="Logout">
         <mat-icon>logout</mat-icon>
       </button>
     </div>
-    </mat-toolbar-row>
-</mat-toolbar>
-<div class="main-cards"> 
-<app-cards ></app-cards>
-<app-cards ></app-cards>
-<app-cards ></app-cards>
-<app-cards ></app-cards>
-<app-cards ></app-cards>
-<!-- <app-book-form></app-book-form> -->
-</div>
-<div class="table-container"> 
+    <div class="main-cards"> 
+      <app-cards ></app-cards>
+      <app-cards ></app-cards>
+      <app-cards ></app-cards>
+      <app-cards ></app-cards>
+      <app-cards ></app-cards>
+      <!-- <app-book-form></app-book-form> -->
+    </div>
+    <div class="table-container"> 
   <h1>All Appointements</h1>
+ <img src="" alt="">
 <app-table></app-table>
 </div>
+  </mat-drawer-content>
+</mat-drawer-container>
 
 

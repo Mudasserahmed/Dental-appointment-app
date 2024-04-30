@@ -1,0 +1,12 @@
+ 
+<mat-drawer-container class="wrapper-container" >
+    <mat-drawer #drawer mode="over" style="width: 30%; display: flex; justify-content: center;">
+  <!-- <a href="/book"  class="link" matTooltip="book New">  <h3>Book Appointement</h3> </a> -->
+    <a mat-list-item [routerLink]="['/book']">book Appointement</a>
+  </mat-drawer>
+    <mat-drawer-content>
+      <!-- Main content, including the router outlet -->
+      <router-outlet></router-outlet>
+      <!-- <ng-content></ng-content> -->
+    </mat-drawer-content>
+  </mat-drawer-container>

@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class DashboardComponent {
-  inital =  0; 
-
+export class NavbarComponent {
   constructor(private router:Router){
 
   }
-
-  // logout logic 
   logout(){
     this.router.navigate(['/login'])
     console.log("local storage cleared")
