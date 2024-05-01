@@ -1,2 +1,23 @@
+<mat-drawer-container  class="example-container" [hasBackdrop]="true">
+    <mat-drawer #drawer  mode="over" style="width:10% ; ">
+        <div > 
+      <a href="/book"  class="link" matTooltip="book New">  <h3>Book Appointement</h3> </a>
+     
+    </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <!-- <img src="../../.././assets/logo.png" alt="Placeholder image" width="70" height="70"> -->
+      <div > 
+        <div style="display: flex; justify-content: space-between;"> 
+        <button [style.display]="displayButton ? 'block' : 'none'" mat-raised-button (click)="drawer.toggle()">
+            <mat-icon> menu </mat-icon>
+          </button>
+          <button [style.display]="displayButton ? 'block' : 'none'" mat-icon-button (click)="logout()" matTooltip="Logout">
+            <mat-icon>logout</mat-icon>
+          </button>
+          </div>
 
- <router-outlet></router-outlet>
+          <router-outlet></router-outlet>
+      </div>
+    </mat-drawer-content>
+</mat-drawer-container> 

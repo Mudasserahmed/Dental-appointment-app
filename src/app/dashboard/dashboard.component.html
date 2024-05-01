@@ -1,17 +1,5 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="true">
-  <mat-drawer #drawer mode="over" style="width: 30%; display: flex; justify-content: center;">
-    <a href="/book"  class="link" matTooltip="book New">  <h3>Book Appointement</h3> </a>
-  </mat-drawer>
-  <mat-drawer-content>
+
     <!-- <img src="../../.././assets/logo.png" alt="Placeholder image" width="70" height="70"> -->
-    <div style="display: flex; justify-content: space-between;"> 
-      <button mat-raised-button (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <button mat-icon-button (click)="logout()" matTooltip="Logout">
-        <mat-icon>logout</mat-icon>
-      </button>
-    </div>
     <div class="main-cards"> 
       <app-cards></app-cards>
       <app-cards></app-cards> 
@@ -27,7 +15,6 @@
  <img src="" alt="">
 <app-table></app-table>
 </div>
-  </mat-drawer-content>
-</mat-drawer-container>
+
 
 
