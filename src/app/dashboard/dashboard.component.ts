@@ -11,13 +11,13 @@ export class DashboardComponent {
   constructor(private router:Router){
 
   }
-
   // logout logic 
   logout(){
     this.router.navigate(['/login'])
     console.log("local storage cleared")
     localStorage.clear()
   }
+  //logo click logic
   logoClick(){
     console.log("image clicked")
     this.router.navigate(["/dashboard"])

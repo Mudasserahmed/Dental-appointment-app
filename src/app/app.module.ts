@@ -25,6 +25,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutComponent } from './layout/layout.component'; 
+import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { LayoutComponent } from './layout/layout.component';
     AppRoutingModule,
     FormsModule,
     MatSelectModule,
+    CalendarModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatTooltipModule,
