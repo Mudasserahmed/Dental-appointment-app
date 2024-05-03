@@ -1,7 +1,16 @@
-
 <!-- <app-navbar></app-navbar> -->
-<app-layout>  </app-layout>
-<div class="center-container" style="background-color: rgb(255, 255, 255);">
+<!-- <app-layout>  </app-layout> -->
+<div style="display: flex;justify-content: center; align-items: center;height: 100vh;">
+  <div class="calender-div">
+    <h1>Book New Appointement</h1>
+    <ejs-calendar (change)="onValueChange($event)" [cssClass]="cssClass"></ejs-calendar>
+    <span id="selected">Selected Value: </span>
+
+    <!-- <ejs-calendar  [start]='startDate'   [firstDayOfWeek]='0' [isMultiSelection]='false' [showTodayButton]='true'></ejs-calendar> -->
+  </div>
+</div>
+
+<!-- <div class="center-container" style="background-color: rgb(255, 255, 255);">
     <form #myForm="ngForm" class="form" (ngSubmit)="submitForm(myForm)">
       <div class="logo-class">
       </div>
@@ -25,8 +34,4 @@
       <br>
       <button mat-flat-button color="primary"> Submit </button> 
     </form>
-    
-    </div>
-
-  
-  
+    </div> -->
