@@ -22,4 +22,7 @@ export class DashboardComponent {
     console.log("image clicked")
     this.router.navigate(["/dashboard"])
    }
+   navigateToBook(){
+    this.router.navigate(["/book"])
+   }
 }

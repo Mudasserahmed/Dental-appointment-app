@@ -7,6 +7,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { ToastrModule } from 'ngx-toastr';
@@ -44,8 +46,10 @@ import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
     FormsModule,
     MatSelectModule,
     CalendarModule,
+    MatNativeDateModule,
     BrowserAnimationsModule,
     MatInputModule,
+    MatDatepickerModule,
     MatTooltipModule,
     MatFormFieldModule,
     MatSidenavModule,
