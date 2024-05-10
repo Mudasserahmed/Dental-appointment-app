@@ -18,9 +18,10 @@ export class AppComponent {
       if (event instanceof NavigationEnd) {
         const currentRoute = this.router.url;
         // Check if current route is login or signup
-        if (currentRoute.includes('login') || currentRoute.includes('signUp') || currentRoute === "/" ) {
+        if (currentRoute.includes('login') || currentRoute.includes('signUp') || currentRoute === "/"  ) {
           this.displayButton = false;
-        } else {
+        }
+        else {
           this.displayButton = true;
         }
       }

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { IconOptions } from '@angular/material/icon';
+import { Component, ViewChild } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -26,6 +28,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./table.component.css']
 })
 export class TableComponent {
-  displayedColumns: string[] = ['position', 'name', 'age', 'date'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['position', 'name','age', 'date'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  @ViewChild(MatPaginator) paginator!: MatPaginator; // <-- Here we added the '!' modifier
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 }

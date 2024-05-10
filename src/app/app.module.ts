@@ -27,7 +27,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutComponent } from './layout/layout.component'; 
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,12 +40,14 @@ import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
     BookFormComponent,
     TableComponent,
     NavbarComponent,
-    LayoutComponent
+    LayoutComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MatPaginatorModule,
     MatSelectModule,
     CalendarModule,
     MatNativeDateModule,
