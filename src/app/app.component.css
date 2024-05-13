@@ -1,0 +1,7 @@
+.side-div a{
+    text-decoration: none;
+    color: black;
+}
+.side-div a:hover{
+    color: rgb(54, 54, 54);
+}

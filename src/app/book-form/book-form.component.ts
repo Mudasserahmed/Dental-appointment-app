@@ -32,6 +32,7 @@ export class BookFormComponent {
   handleDateClick(arg: any) {
     console.log('date click! ' + arg.dateStr);
     this.selectedDate = arg.dateStr;
+    alert(arg.dateStr  + "selected")
   }
 
   public startDate: Date = new Date("2024-01-01");

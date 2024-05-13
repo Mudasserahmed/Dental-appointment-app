@@ -1,14 +1,16 @@
-<mat-drawer-container  class="example-container" [hasBackdrop]="true">
-    <mat-drawer #drawer  mode="over" style="width:10% ; ">
-        <div > 
+<mat-drawer-container  class="example-container" [hasBackdrop]="true" >
+    <mat-drawer #drawer  mode="over" style="width:17%; ">
+        <div  class="side-div"> 
       <a href="/book"  class="link" matTooltip="book New">  <h3>Book Appointement</h3> </a>
+      <a href="/dashboard"  class="link" matTooltip="dashboard">  <h3>Dashboard</h3> </a>
+
      
     </div>
     </mat-drawer>
     <mat-drawer-content>
       <!-- <img src="../../.././assets/logo.png" alt="Placeholder image" width="70" height="70"> -->
       <div > 
-        <div style="display: flex; justify-content: space-between;"> 
+        <div style="display: flex; justify-content: space-between;background-color: rgb(254, 254, 254); width: 100%;"> 
         <button [style.display]="displayButton ? 'block' : 'none'" mat-raised-button (click)="drawer.toggle()">
             <mat-icon> menu </mat-icon>
           </button>

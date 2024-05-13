@@ -23,7 +23,6 @@ import { BookFormComponent } from './book-form/book-form.component';
 import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { NavbarComponent } from './navbar/navbar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutComponent } from './layout/layout.component'; 
@@ -41,7 +40,6 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     CardsComponent,
     BookFormComponent,
     TableComponent,
-    NavbarComponent,
     LayoutComponent,
     PageNotFoundComponent
   ],
