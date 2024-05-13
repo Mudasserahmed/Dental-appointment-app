@@ -30,8 +30,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class TableComponent {
   displayedColumns: string[] = ['position', 'name','age', 'date'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  @ViewChild(MatPaginator) paginator!: MatPaginator; // <-- Here we added the '!' modifier
-
+  @ViewChild(MatPaginator) paginator!: MatPaginator; 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
