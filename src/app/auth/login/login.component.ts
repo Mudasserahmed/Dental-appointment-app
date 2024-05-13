@@ -13,7 +13,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-   success = false;
+   success:boolean = false;
+   loginError:boolean  = false ;
+   loader:boolean = false;
   formData = {
     password: '',
     email: ''
@@ -21,8 +23,11 @@ export class LoginComponent {
 
   constructor(private http: HttpClient,private router: Router){}
 
+
+  //submit form function logic
   submitForm(form: any) {
     if (form.valid) {
+      this.loader = true 
       localStorage.setItem("user",JSON.stringify(this.formData))
       console.log('Form submitted successfully!', this.formData);
      
@@ -31,15 +36,15 @@ export class LoginComponent {
       .pipe(
         catchError((error) => {
           console.error('Error occurred while submitting form:', error);
-          // Optionally, you can handle the error here, such as displaying a message to the user
-          // For example, you could show a toast message or set a flag to display an error message in your UI
-          // Example: this.errorMessage = 'An error occurred. Please try again later.';
+           this.loginError = true 
+           this.loader = false ;
           return throwError(error); // Rethrow the error to propagate it to the subscriber
         })
       )
       .subscribe(
         (data) => {
           console.log('Response from server:', data);
+          this.loader = false ;
           this.success = true
           this.formData = {
             password: '',

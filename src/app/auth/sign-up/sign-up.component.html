@@ -28,10 +28,11 @@
   
     <button mat-flat-button  color="primary" [disabled]="loader">
       <span *ngIf="loader">
-        <mat-spinner> </mat-spinner>
+        <mat-spinner diameter="20"> </mat-spinner>
       </span>
       <span *ngIf="!loader">Register</span>
     </button>
+    <span *ngIf="loginError === true " style="display: flex; justify-content: center; color: red;" >login error</span>
   </form>
   
   </div>

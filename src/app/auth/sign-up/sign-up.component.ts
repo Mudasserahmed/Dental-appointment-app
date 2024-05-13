@@ -18,6 +18,7 @@ password: string;
 export class SignUpComponent {
   success:boolean = false;
   loader:boolean = false;
+  loginError:boolean = false
     formData :FormData = {
      age:0,
     fullName: '',
@@ -28,13 +29,13 @@ export class SignUpComponent {
    submitForm(form:any) {
     if (form.valid) {
       this.loader = true;
-      
       // Your API request logic goes here
       this.http.post(BASE_URL + "/user/register", this.formData)
         .pipe(
           catchError((error) => {
             console.error('Error occurred while submitting form:', error);
             this.loader = false; // Ensure loader is stopped on error
+            this.loginError = true
             return throwError(error);
           })
         )

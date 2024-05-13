@@ -18,8 +18,15 @@
       <p>don't have an account <a href="/signUp">Register</a></p>
       
         <br>
-        <button mat-flat-button color="primary"> Login </button>
-        <p style="color: white; background-color: rgb(155, 214, 155); padding: 2px;" *ngIf="success === true">Login Successfull</p>
+        <button mat-flat-button  color="primary" [disabled]="loader">
+          <span *ngIf="loader">
+            <mat-spinner diameter="20" > </mat-spinner>
+          </span>
+          <span *ngIf="!loader">Login</span>
+        </button>
+        <span style="display: flex; justify-content: center; color:green; padding: 2px;" *ngIf="success === true">Login Successfull</span>
+        <span style="display: flex; justify-content: center; color:red; padding: 2px;" *ngIf="loginError === true">Login Error</span>
+
       </form>
     </div>
   
