@@ -17,22 +17,23 @@ interface FormData {
   styleUrls: ['./book-form.component.css']
 })
 export class BookFormComponent {
-  selectedDate = "";
+  selectedDate = null;
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin],
+    selectable:true,
     dateClick: (arg) => this.handleDateClick(arg),
     events: [
       { title: 'event 1', date: '2019-04-01' },
       { title: 'event 2', date: '2019-04-02' }
     ],
-    eventClassNames: ['selected-date'] // Add custom class for selected date
+    eventClassNames: ['selected-date'] 
   };
 
   handleDateClick(arg: any) {
     console.log('date click! ' + arg.dateStr);
     this.selectedDate = arg.dateStr;
-    alert(arg.dateStr  + "selected")
+    // alert(arg.dateStr  + "selected")
   }
 
   public startDate: Date = new Date("2024-01-01");

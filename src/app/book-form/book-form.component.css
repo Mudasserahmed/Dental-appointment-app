@@ -100,4 +100,6 @@ form {
     max-width: 800px;
     background: #e9eaf0;
     }
-  
+.selected-date{
+   color: red;
+}
