@@ -1,37 +1,20 @@
-<!-- <app-navbar></app-navbar> -->
-<!-- <app-layout>  </app-layout> -->
-<div style="display: flex;justify-content: center; align-items: center;height: 100vh;">
+
+<!-- <div style="display: flex;justify-content: center; align-items: center;height: 100vh;">
   <div class="calender-div">
     <h1>Book New Appointement</h1>
     <ejs-calendar (change)="onValueChange($event)" [cssClass]="cssClass"></ejs-calendar>
     <span id="selected">Selected Value: </span>
-    <!-- <ejs-calendar  [start]='startDate'   [firstDayOfWeek]='0' [isMultiSelection]='false' [showTodayButton]='true'></ejs-calendar> -->
   </div>
   
-</div>
+</div> -->
+<div   style="display: flex;justify-content: center; align-items: center;height: 100vh; margin-top: 20px;margin-bottom: 20px;"> 
+  <div class="" style="width: 800px;">
+    <full-calendar  style="cursor:pointer;" [options]="calendarOptions"></full-calendar>
 
-<!-- <div class="center-container" style="background-color: rgb(255, 255, 255);">
-    <form #myForm="ngForm" class="form" (ngSubmit)="submitForm(myForm)">
-      <div class="logo-class">
-      </div>
-      <h1>Book Appointement</h1>
-      <mat-form-field>
-        <mat-label>FullName</mat-label>
-        <input matInput type="text" id="fullName" name="fullName" [(ngModel)]="formData.fullName" required>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Age</mat-label>
-        <input matInput type="number" id="phone" name="phone" [(ngModel)]="formData.phone" required >
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Email</mat-label>
-        <input matInput type="text" id="insurance" name="insurance" [(ngModel)]="formData.insurance" required>
-      </mat-form-field>  
-      <mat-form-field>
-        <mat-label>Date Of Appointement</mat-label>
-        <input matInput type="date" id="appDate" name="appDate" [(ngModel)]="formData.appDate" required>
-      </mat-form-field>  
-      <br>
-      <button mat-flat-button color="primary"> Submit </button> 
-    </form>
-    </div> -->
+<!-- <full-calendar
+  [options]="calendarOptions"
+  [events]="eventsPromise | async"
+></full-calendar> -->
+
+</div>
+</div>
