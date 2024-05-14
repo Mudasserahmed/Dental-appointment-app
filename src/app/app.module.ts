@@ -30,6 +30,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { ProfileComponent } from './profile/profile.component';
+import { MatCardModule } from '@angular/material/card'; 
 // import { DayGridModule } from '@fullcalendar/daygrid';
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     BookFormComponent,
     TableComponent,
     LayoutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     MatProgressSpinnerModule,
     MatGridListModule,
     MatIconModule,
+    MatCardModule,  
     MatToolbarModule,
     FullCalendarModule, 
     ToastrModule.forRoot()

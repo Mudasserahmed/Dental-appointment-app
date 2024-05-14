@@ -1,0 +1,23 @@
+<!-- profile.component.html -->
+
+<mat-card>
+    <mat-card-header>
+      <h1>User Profile</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput placeholder="Full Name" [(ngModel)]="user.fullName">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Email" [(ngModel)]="user.email">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Phone Number" [(ngModel)]="user.phoneNumber">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Address" [(ngModel)]="user.address">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="saveProfile()">Save Profile</button>
+    </mat-card-content>
+  </mat-card>
+  

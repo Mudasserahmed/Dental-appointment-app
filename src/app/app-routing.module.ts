@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookFormComponent } from './book-form/book-form.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {path:"",component:LoginComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:"signUp",component:SignUpComponent},
   {path:"dashboard",component:DashboardComponent},
   {path:"book",component:BookFormComponent},
+  {path:"profile",component:ProfileComponent},
   {path:"**" , component:PageNotFoundComponent}
 ];
 
