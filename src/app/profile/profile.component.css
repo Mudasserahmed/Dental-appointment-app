@@ -1,21 +1,23 @@
 /* profile.component.css */
 
 mat-card {
-    width: 400px;
-    margin: 20px auto;
-    padding: 20px;
+  width: 600px; /* Increased width to accommodate two columns */
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .column {
+    grid-template-columns: 1fr 1fr;
   }
-  
-  mat-card-title {
-    font-size: 24px;
-  }
-  
-  mat-form-field {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    margin-top: 20px;
-  }
-  
+}
+
+mat-form-field {
+  width: 100%;
+}

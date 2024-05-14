@@ -11,8 +11,12 @@ export class ProfileComponent {
   user: any = {
     fullName: '',
     email: '',
+    dateOfBirth: '',
+    gender: '',
     phoneNumber: '',
-    address: ''
+    address: '',
+    city: '',
+    country: ''
   };
 
   saveProfile() {
