@@ -9,11 +9,12 @@
 </div> -->
 <div   style="display: flex;justify-content: center; align-items: center;height: 100vh; margin-top: 20px;margin-bottom: 20px;"> 
   <div class="" style="width: 800px;">
+    <button  *ngIf="selected === true"  mat-flat-button color="primary" (click)="SubmitBook()"  style="margin-top: 10px;">Submit </button>
     <full-calendar  style="cursor:pointer;" [options]="calendarOptions"></full-calendar>
-<!-- <full-calendar
-  [options]="calendarOptions"
-  [events]="eventsPromise | async"
-></full-calendar> -->
-
-</div>
-</div>
+    <!-- <full-calendar
+      [options]="calendarOptions"
+      [events]="eventsPromise | async"
+      ></full-calendar> -->
+      
+    </div>
+  </div>

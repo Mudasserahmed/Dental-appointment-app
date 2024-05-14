@@ -4,12 +4,7 @@ import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 
-interface FormData {
-  fullName: string;
-  phone: string;
-  insurance: string;
-  appDate: null;
-}
+
 
 @Component({
   selector: 'app-book-form',
@@ -17,7 +12,9 @@ interface FormData {
   styleUrls: ['./book-form.component.css']
 })
 export class BookFormComponent {
-  selectedDate = null;
+  selected = false
+  selectedDate = null
+  //calender logic
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin],
@@ -30,38 +27,14 @@ export class BookFormComponent {
     eventClassNames: ['selected-date'] 
   };
 
+  //date click logic
   handleDateClick(arg: any) {
     console.log('date click! ' + arg.dateStr);
-    this.selectedDate = arg.dateStr;
+    this.selected = true
+    this.selectedDate = arg.dateStr
     // alert(arg.dateStr  + "selected")
   }
-
-  public startDate: Date = new Date("2024-01-01");
-  public endDate: Date = new Date("2024-12-31");
-  public cssClass = "e-custom";
-
-  formData: FormData = {
-    fullName: "",
-    phone: "",
-    insurance: '',
-    appDate: null
-  };
-
-  constructor(private router: Router) { }
-
-  submitForm(formData: any) {
-
+  SubmitBook(){
+    console.log(this.selectedDate)
   }
-
-  logoClick() {
-    console.log("image clicked");
-    this.router.navigate(["/dashboard"]);
   }
-
-  onValueChange(args: any): void {
-    /*Displays selected date in the label*/
-    console.log(args?.value.toLocaleDateString());
-    (<HTMLInputElement>document.getElementById("selected")).textContent =
-      "Selected Value: " + args.value.toLocaleDateString();
-  }
-}
