@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         const currentRoute = this.router.url;
-        // Check if current route is login, signup, or not found
+        // Check if current route and hiding drawer accordingly 
         if (currentRoute.includes('login') || currentRoute.includes('signUp') || currentRoute === "/"  || this.activatedRoute.snapshot.firstChild?.routeConfig?.path === '**') {
           this.displayButton = false;
         } else {

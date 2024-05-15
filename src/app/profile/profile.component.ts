@@ -1,27 +1,36 @@
 // profile.component.ts
 
 import { Component } from '@angular/core';
+interface FormData  {
+  fullName : string,
+  email:string ,
+  dateOfBirth: string ,
+  gender:string,
+  phoneNumber: number ,
+  address:string,
+  city:string,
+  country: string 
+ }
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
+
+
 export class ProfileComponent {
-  user: any = {
+  user: FormData = {
     fullName: '',
     email: '',
     dateOfBirth: '',
     gender: '',
-    phoneNumber: '',
+    phoneNumber: 0,
     address: '',
     city: '',
     country: ''
   };
-
   saveProfile() {
-    // For demonstration purposes, log user profile data to console
     console.log(this.user);
-    // You can implement HTTP requests to save data to backend here
   }
 }

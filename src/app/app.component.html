@@ -1,17 +1,14 @@
 <mat-drawer-container  class="example-container" [hasBackdrop]="true" >
-    <mat-drawer #drawer  mode="over" style="width:17%; ">
-        <div  class="side-div"> 
-      <a href="/book"  class="link" matTooltip="book New">  <h3>Book Appointement</h3> </a>
-      <a href="/dashboard"  class="link" matTooltip="dashboard">  <h3>Dashboard</h3> </a>
-      <a href="/profile"  class="link" matTooltip="profile">  <h3>User Profile</h3> </a>
-
-     
+  <mat-drawer #drawer mode="over" class="drawer">
+    <div class="side-div"> 
+      <h3><a [routerLink]="['/book']" matTooltip="book New" class="link">Book Appointment</a></h3>
+      <h3><a [routerLink]="['/dashboard']" matTooltip="dashboard" class="link">Dashboard</a></h3>
+      <h3><a [routerLink]="['/profile']" matTooltip="profile" class="link">User Profile</a></h3>
     </div>
-    </mat-drawer>
+  </mat-drawer>
     <mat-drawer-content>
-      <!-- <img src="../../.././assets/logo.png" alt="Placeholder image" width="70" height="70"> -->
       <div > 
-        <div style="display: flex; justify-content: space-between;background-color: rgb(254, 254, 254); width: 100%;"> 
+        <div style="display: flex; justify-content: space-between;background-color: rgb(244, 244, 244);"> 
         <button [style.display]="displayButton ? 'block' : 'none'" mat-raised-button (click)="drawer.toggle()">
             <mat-icon> menu </mat-icon>
           </button>
@@ -19,7 +16,6 @@
             <mat-icon>logout</mat-icon>
           </button>
           </div>
-          
           <router-outlet></router-outlet>
       </div>
     </mat-drawer-content>

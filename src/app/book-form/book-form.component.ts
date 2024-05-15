@@ -32,7 +32,6 @@ export class BookFormComponent {
     console.log('date click! ' + arg.dateStr);
     this.selected = true
     this.selectedDate = arg.dateStr
-    // alert(arg.dateStr  + "selected")
   }
   SubmitBook(){
     console.log(this.selectedDate)

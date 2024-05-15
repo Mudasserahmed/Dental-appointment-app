@@ -1,23 +1,29 @@
 /* profile.component.css */
 
 mat-card {
-  width: 600px; /* Increased width to accommodate two columns */
+  max-width: 600px; /* Maximum width to prevent overflow */
+  width: 100%; /* Adjusting width to fit smaller screens */
   margin: 20px auto;
   padding: 20px;
 }
 
 .column {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Single column layout for small screens */
   gap: 20px;
 }
 
 @media (min-width: 600px) {
   .column {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Two columns for larger screens */
   }
 }
 
 mat-form-field {
   width: 100%;
+}
+
+button {
+  width: 100%; /* Make the button full width */
+  margin-top: 20px; /* Add some spacing between the form fields and the button */
 }

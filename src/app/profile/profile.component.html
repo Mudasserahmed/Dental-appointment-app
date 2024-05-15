@@ -1,6 +1,4 @@
-<!-- profile.component.html -->
-
-<mat-card>
+<mat-card style="background-color: rgb(244, 244, 244);">
     <mat-card-header>
       <h1>User Profile</h1>
     </mat-card-header>
@@ -13,7 +11,9 @@
           <input matInput placeholder="Email" [(ngModel)]="user.email">
         </mat-form-field>
         <mat-form-field>
-          <input matInput placeholder="Date of Birth" [(ngModel)]="user.dateOfBirth">
+          <input matInput [matDatepicker]="picker" placeholder="Date of Birth" [(ngModel)]="user.dateOfBirth">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
         <mat-form-field>
           <input matInput placeholder="Gender" [(ngModel)]="user.gender">
