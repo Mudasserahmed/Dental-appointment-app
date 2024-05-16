@@ -1,0 +1,36 @@
+<mat-card style="background-color: rgb(244, 244, 244);">
+    <mat-card-header>
+      <h1>Appointment History</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="column">
+        <mat-form-field>
+          <input matInput placeholder="Patient Name" [(ngModel)]="appointment.patientName">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Doctor Name" [(ngModel)]="appointment.doctorName">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Date" [(ngModel)]="appointment.date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Time" [(ngModel)]="appointment.time">
+        </mat-form-field>
+      </div>
+      <div class="column">
+        <mat-form-field>
+          <textarea matInput placeholder="Reason for Appointment" [(ngModel)]="appointment.reason" rows="4"></textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Location" [(ngModel)]="appointment.location">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Status" [(ngModel)]="appointment.status">
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" (click)="saveAppointment()">Save Appointment</button>
+    </mat-card-content>
+  </mat-card>
+  

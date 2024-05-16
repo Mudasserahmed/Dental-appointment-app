@@ -31,7 +31,8 @@ import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { ProfileComponent } from './profile/profile.component';
-import { MatCardModule } from '@angular/material/card'; 
+import { MatCardModule } from '@angular/material/card';
+import { AppointmentHistoryComponent } from './appointment-history/appointment-history.component'; 
 // import { DayGridModule } from '@fullcalendar/daygrid';
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MatCardModule } from '@angular/material/card';
     TableComponent,
     LayoutComponent,
     PageNotFoundComponent,
-    ProfileComponent
+    ProfileComponent,
+    AppointmentHistoryComponent
   ],
   imports: [
     BrowserModule,
