@@ -14,6 +14,13 @@
   gap: 10px;
   justify-content: center;
 }
+@media (max-width:600px)  {
+ .main-cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ } 
+}
 .draw{
   width: 40%;
 }

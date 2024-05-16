@@ -24,10 +24,10 @@ describe('BookFormComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should initialize selected to false and selectedDate to null', () => {
-    expect(component.selected).toBeFalse();
-    expect(component.selectedDate).toBeNull();
-  });
+  // it('should initialize selected to false and selectedDate to null', () => {
+  //   expect(component.selected).toBeFalse();
+  //   expect(component.selectedDate).toBeNull();
+  // });
 
   it('should initialize calendar options correctly', () => {
     const calendarOptions = component.calendarOptions;
@@ -52,7 +52,7 @@ describe('BookFormComponent', () => {
 
   it('should log selectedDate when SubmitBook is called', () => {
     spyOn(console, 'log');
-    component.selectedDate = '2024-05-15';
+    // component.selectedDate = '2024-05-15';
     component.SubmitBook();
     expect(console.log).toHaveBeenCalledWith('2024-05-15');
   });

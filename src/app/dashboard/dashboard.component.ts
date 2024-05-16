@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent {
   inital =  0; 
-
+  
   constructor(private router:Router){
 
   }
