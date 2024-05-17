@@ -32,7 +32,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { ProfileComponent } from './profile/profile.component';
 import { MatCardModule } from '@angular/material/card';
-import { AppointmentHistoryComponent } from './appointment-history/appointment-history.component'; 
+import { AppointmentHistoryComponent } from './appointment-history/appointment-history.component';
+import { FeedbackComponent } from './feedback/feedback.component'; 
 // import { DayGridModule } from '@fullcalendar/daygrid';
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AppointmentHistoryComponent } from './appointment-history/appointment-h
     LayoutComponent,
     PageNotFoundComponent,
     ProfileComponent,
-    AppointmentHistoryComponent
+    AppointmentHistoryComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

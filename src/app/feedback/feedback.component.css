@@ -1,0 +1,21 @@
+.main{
+    height: 100vh;
+}
+
+.feedback-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  

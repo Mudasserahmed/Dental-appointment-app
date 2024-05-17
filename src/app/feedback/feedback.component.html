@@ -1,0 +1,16 @@
+'
+<div class="main"> 
+<div class="feedback-container">
+    <h2>Leave your feedback</h2>
+    <mat-form-field>
+      <input matInput placeholder="Your Name" [(ngModel)]="name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Your Email" [(ngModel)]="email">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Type your feedback here" [(ngModel)]="feedbackText"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="submitFeedback()">Submit</button>
+  </div>
+</div>
