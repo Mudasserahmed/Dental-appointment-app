@@ -32,7 +32,7 @@ export class LoginComponent {
       console.log('Form submitted successfully!', this.formData);
      
       //api call
-      this.http.post(BASE_URL + "/user/login", this.formData)
+      this.http.post(BASE_URL + "/login", this.formData)
       .pipe(
         catchError((error) => {
           console.error('Error occurred while submitting form:', error);
@@ -50,7 +50,9 @@ export class LoginComponent {
             password: '',
             email: ''
           }
-            this.router.navigate(['/dashboard']);
+            // this.router.navigate(['/dashboard']);
+            localStorage.setItem("userData",JSON.stringify(data))
+            this.router.navigate(['/dashboard'], { skipLocationChange: true });
         }
       );
       // Here you can handle form submission, e.g., sending data to a server

@@ -9,11 +9,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProfileComponent } from './profile/profile.component';
 import { AppointmentHistoryComponent } from './appointment-history/appointment-history.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path:"",component:LoginComponent},
-  {path:"login",component:LoginComponent},
-  {path:"signUp",component:SignUpComponent},
+  {path:"login",component:LoginComponent,canActivate:[AuthGuard]},
+  {path:"signUp",component:SignUpComponent,canActivate:[AuthGuard]},
   {path:"dashboard",component:DashboardComponent},
   {path:"book",component:BookFormComponent},
   {path:"profile",component:ProfileComponent},
