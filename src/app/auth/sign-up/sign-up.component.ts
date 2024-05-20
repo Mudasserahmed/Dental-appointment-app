@@ -4,6 +4,7 @@ import { BASE_URL } from 'src/utils';
 import { Router } from '@angular/router';
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { ApiService } from 'src/app/api.service';
 interface FormData {
 fullName: string;
 age: number;
@@ -25,29 +26,41 @@ export class SignUpComponent {
     email:'',
     password:'',
     };
-   constructor(private http: HttpClient,private router: Router){}
+   constructor(private http: HttpClient,private router: Router,private apiService:ApiService){}
    submitForm(form:any) {
     if (form.valid) {
       this.loader = true;
       // Your API request logic goes here
-      this.http.post(BASE_URL + "/user/register", this.formData)
-        .pipe(
-          catchError((error) => {
-            console.error('Error occurred while submitting form:', error);
-            this.loader = false; // Ensure loader is stopped on error
-            this.loginError = true
-            return throwError(error);
-          })
-        )
-        .subscribe(
-          (data) => {
-            console.log('Response from server:', data);
-            this.success = true;
-            this.loader = false;
-            this.router.navigate(['/login']);
-            this.resetForm();
-          }
-        );
+      this.apiService.post("user/register",this.formData).subscribe(
+        (data)=>{
+          console.log("user register successful",data)
+          this.loader = false
+          this.loginError = false
+        },
+        (error)=>{
+          console.log("error while registering",error)
+          this.loader = false
+          this.loginError = true
+        }
+      )
+      // this.http.post(BASE_URL + "/user/register", this.formData)
+      //   .pipe(
+      //     catchError((error) => {
+      //       console.error('Error occurred while submitting form:', error);
+      //       this.loader = false; // Ensure loader is stopped on error
+      //       this.loginError = true
+      //       return throwError(error);
+      //     })
+      //   )
+      //   .subscribe(
+      //     (data) => {
+      //       console.log('Response from server:', data);
+      //       this.success = true;
+      //       this.loader = false;
+      //       this.router.navigate(['/login']);
+      //       this.resetForm();
+      //     }
+      //   );
     } else {
       console.log('Form is invalid.');
     }
