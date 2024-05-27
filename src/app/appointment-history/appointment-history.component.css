@@ -1,5 +1,8 @@
 /* profile.component.css */
 
+.main-container {
+  height: 100vh
+}
 mat-card {
     max-width: 600px; /* Maximum width to prevent overflow */
     width: 100%; /* Adjusting width to fit smaller screens */
