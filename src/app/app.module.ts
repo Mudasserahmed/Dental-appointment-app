@@ -33,7 +33,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { ProfileComponent } from './profile/profile.component';
 import { MatCardModule } from '@angular/material/card';
 import { AppointmentHistoryComponent } from './appointment-history/appointment-history.component';
-import { FeedbackComponent } from './feedback/feedback.component'; 
+import { FeedbackComponent } from './feedback/feedback.component';
+import { StripeCheckoutComponent } from './stripe-checkout/stripe-checkout.component'; 
 // import { DayGridModule } from '@fullcalendar/daygrid';
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
     PageNotFoundComponent,
     ProfileComponent,
     AppointmentHistoryComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    StripeCheckoutComponent
   ],
   imports: [
     BrowserModule,
